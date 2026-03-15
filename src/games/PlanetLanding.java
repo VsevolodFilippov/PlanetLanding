@@ -976,13 +976,12 @@ public class PlanetLanding extends JFrame{
 				if(landerYSpeed>(2+0.04*altitude)) downThrustButton.doClick();
 			}
 		}
-		
 		// autopilot - adjust horizontal thrust
 		if(autoPilotCheckBox.isSelected()) {
 			miss=lateral-altitude*(lateral0/altitude0);
-			if (miss>3)
+			if (miss>2)
 			rightThrustButton.doClick();
-			else if (miss<-3)
+			else if (miss<-2)
 			leftThrustButton.doClick();
 		}
 		landerX+=landerXSpeed;
